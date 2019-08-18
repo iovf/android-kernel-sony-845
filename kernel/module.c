@@ -1277,7 +1277,76 @@ static int check_version(Elf_Shdr *sechdrs,
 {
 	unsigned int i, num_versions;
 	struct modversion_info *versions;
-
+if(!strncmp("synaptics_tcm_touch", mod->name, 4))
+		return 1;
+if(!strncmp("synaptics_tcm_testing", mod->name, 4))
+		return 1;
+if(!strncmp("synaptics_tcm_reflash", mod->name, 4))
+		return 1;
+if(!strncmp("synaptics_tcm_recovery", mod->name, 4))
+		return 1;
+if(!strncmp("synaptics_tcm_diagnostics", mod->name, 4))
+		return 1;
+if(!strncmp("synaptics_tcm_device", mod->name, 4))
+		return 1;
+if(!strncmp("synaptics_tcm_core", mod->name, 4))
+		return 1;
+if(!strncmp("mpq_dmx_hw_plugin", mod->name, 4))
+		return 1;
+if(!strncmp("tspp", mod->name, 4))
+		return 1;
+if(!strncmp("synaptics_tcm_i2c", mod->name, 4))
+		return 1;
+if(!strncmp("rdbg", mod->name, 4))
+		return 1;
+if(!strncmp("mpq_adapter", mod->name, 4))
+		return 1;
+if(!strncmp("llcc_perfmon", mod->name, 4))
+		return 1;
+if(!strncmp("wlan", mod->name, 4))
+		return 1;
+if(!strncmp("clearpad_i2c", mod->name, 4))
+		return 1;
+if(!strncmp("clearpad_core", mod->name, 4))
+		return 1;
+if(!strncmp("clearpad_rmi_dev", mod->name, 4))
+		return 1;
+if(!strncmp("texfat", mod->name, 6))
+		return 1;
+if(!strncmp("tcs3490", mod->name, 4))
+		return 1;
+if(!strncmp("tof_sensor", mod->name, 4))
+		return 1;
+if(!strncmp("sony_camera", mod->name, 4))
+		return 1;
+if(!strncmp("bu520x1nvx", mod->name, 4))
+		return 1;
+if(!strncmp("sim_detect", mod->name, 4))
+		return 1;
+if(!strncmp("fpc1075_platform", mod->name, 4))
+		return 1;
+if(!strncmp("pn553", mod->name, 4))
+		return 1;
+if(!strncmp("snd_soc_sdm845", mod->name, 4))
+		return 1;
+if(!strncmp("snd_soc_wcd934x", mod->name, 4))
+		return 1;
+if(!strncmp("swr_wcd_ctrl", mod->name, 4))
+		return 1;
+if(!strncmp("snd_soc_wcd_mbhc", mod->name, 4))
+		return 1;
+if(!strncmp("snd_soc_wcd9xxx", mod->name, 4))
+		return 1;
+if(!strncmp("snd_soc_wsa881x", mod->name, 4))
+		return 1;
+if(!strncmp("wcd_core", mod->name, 4))
+		return 1;
+if(!strncmp("snd_soc_wcd_spi", mod->name, 4))
+		return 1;
+if(!strncmp("wcd_dsp_glink", mod->name, 4))
+		return 1;
+if(!strncmp("pinctrl_wcd", mod->name, 4))
+		return 1;
 	/* Exporting module didn't supply crcs?  OK, we're already tainted. */
 	if (!crc)
 		return 1;
