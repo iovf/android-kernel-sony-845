@@ -7,7 +7,7 @@ export PATH=/root/build_tool/aarch64/bin:$PATH
 export CROSS_COMPILE=aarch64-linux-android-
 export KBUILD_DIFFCONFIG=akari_diffconfig
 make CONFIG_BUILD_ARM64_DT_OVERLAY=y O=./out sdm845-perf_defconfig
-make CONFIG_BUILD_ARM64_DT_OVERLAY=y O=./out
+make CONFIG_BUILD_ARM64_DT_OVERLAY=y O=./out -j6
 /root/build_tool/mkbootimg.py  \
 --kernel out/arch/arm64/boot/Image.gz-dtb \
 --ramdisk ./xz2.gz \
